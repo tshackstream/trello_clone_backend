@@ -1,0 +1,14 @@
+
+-- +migrate Up
+CREATE TABLE IF NOT EXISTS `boards` (
+    `id` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `user_id` INT(11) NOT NULL,
+    `title` VARCHAR(64) NOT NULL,
+    `disp_order` INT(11) NOT NULL,
+    `created_at` DATETIME NOT NULL,
+    `updated_at` DATETIME NOT NULL,
+    `deleted_at` DATETIME DEFAULT NULL
+);
+
+-- +migrate Down
+DROP TABLE IF EXISTS `boards`;
