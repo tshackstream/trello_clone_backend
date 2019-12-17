@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS `users` (
     `name` VARCHAR(100) DEFAULT NULL,
     `created_at` DATETIME NOT NULL,
     `updated_at` DATETIME NOT NULL,
-    `deleted_at` DATETIME DEFAULT NULL
+    `deleted_at` DATETIME DEFAULT NULL,
     UNIQUE KEY uq_user_id_email (`user_id`, `email`)
 );
 

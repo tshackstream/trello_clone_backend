@@ -36,4 +36,5 @@ func main() {
 
 func routing(e *echo.Echo) {
 	e.GET("/api/v1/boards", borads.List)
+	e.POST("/api/v1/boards", borads.CreateOrUpdate)
 }
